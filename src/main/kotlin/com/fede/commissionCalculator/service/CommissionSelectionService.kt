@@ -6,12 +6,10 @@ import com.fede.commissionCalculator.rule.ICommissionSelectionRule
 import java.math.BigDecimal
 
 class CommissionSelectionService(
-    val commissionCalculationRules: List<ICommissionCalculationRule>,
-    val comissionSelectionRule: ICommissionSelectionRule
+    private val commissionCalculationRules: List<ICommissionCalculationRule>,
+    private val commissionSelectionRule: ICommissionSelectionRule
 ) {
     fun getCommission(amount: BigDecimal, request: CommissionCalculatorRequest): BigDecimal {
         val possibleCommissions: List<BigDecimal> =
             commissionCalculationRules.map { it.getCommission(amount, request) }.filterNotNull()
-        return comissionSelectionRule.selectCommission(possibleCommissions)
-    }
-}
+        return commissionSelectionRule.selectCommission(possibleCommissions)

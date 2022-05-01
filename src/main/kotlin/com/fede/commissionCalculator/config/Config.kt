@@ -3,7 +3,12 @@ package com.fede.commissionCalculator.config
 import com.fede.commissionCalculator.adapter.CurrencyExchangeRateAdapter
 import com.fede.commissionCalculator.service.MonthlyTransactionsService
 import com.fede.commissionCalculator.persistence.TransactionRepository
-import com.fede.commissionCalculator.rule.*
+import com.fede.commissionCalculator.rule.ICommissionCalculationRule
+import com.fede.commissionCalculator.rule.DefaultCommissionRule
+import com.fede.commissionCalculator.rule.ClientDiscountCommissionRule
+import com.fede.commissionCalculator.rule.HighTurnoverCommissionRule
+import com.fede.commissionCalculator.rule.ICommissionSelectionRule
+import com.fede.commissionCalculator.rule.MinCommissionSelectionRule
 import com.fede.commissionCalculator.service.CommissionSelectionService
 import com.fede.commissionCalculator.service.CurrencyConversionService
 import org.springframework.context.annotation.Bean

@@ -1,10 +1,7 @@
 package com.fede.commissionCalculator.service
 
 import com.fede.commissionCalculator.adapter.CurrencyExchangeRateAdapter
-import mu.KotlinLogging
 import java.math.BigDecimal
-
-private val log = KotlinLogging.logger { }
 
 class CurrencyConversionService(private val exchangeRatesAdapter: CurrencyExchangeRateAdapter) {
 

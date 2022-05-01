@@ -1,9 +1,7 @@
 package com.fede.commissionCalculator.adapter
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import mu.KotlinLogging
 import org.json.JSONObject
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.json
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
